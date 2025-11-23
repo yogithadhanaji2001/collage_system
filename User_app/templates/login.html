@@ -1,0 +1,51 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Login | College Management System{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card bg-black text-light p-4 shadow-lg fade-in" style="width: 400px; border-radius: 12px;">
+
+        <h3 class="text-center mb-3"><i class="bi bi-box-arrow-in-right"></i> Login</h3>
+
+        <!-- Show messages -->
+        {% if messages %}
+        {% for m in messages %}
+        <div class="alert alert-danger py-2">{{ m }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- {% if error %}
+        <p style="color:red">{{ error }}</p>
+        {% endif %} -->
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label >Username</label>
+                <input type="text" placeholder="enter username" name="username" class="form-control bg-dark text-light border-secondary " required>
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" placeholder="enter password" name="password" class="form-control bg-dark text-light border-secondary"
+                    required>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-2">
+                <i class="bi bi-unlock-fill"></i> Login
+            </button>
+
+            <p class="mt-3 text-center">
+                Don’t have an account?
+                <a href="{% url 'register' %}" class="text-info">Register</a>
+            </p>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

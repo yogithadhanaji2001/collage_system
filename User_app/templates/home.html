@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home | College Management System{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section text-white d-flex align-items-center mt-5"
+         style="height: 70vh; background: #0c0f16; margin-top: 900px;">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Welcome to College Management System</h1>
+        <p class="lead mt-3">Manage Students | Staff | Courses | Attendance | Results</p>
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg mt-4 px-4 py-2">
+            Get Started
+        </a>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Features</h2>
+        <div class="row g-4">
+
+            <!-- Feature 1 -->
+            <div class="col-md-4">
+                <div class="p-4 rounded bg-secondary shadow-sm h-100">
+                    <h4>Student Management</h4>
+                    <p>Register, update, track academic performance and manage attendance.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4" id="Feature">
+                <div class="p-4 rounded bg-secondary shadow-sm h-100">
+                    <h4>Staff Management</h4>
+                    <p>Manage teaching & non-teaching staff with ease.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4">
+                <div class="p-4 rounded bg-secondary shadow-sm h-100">
+                    <h4>Course Management</h4>
+                    <p>Organize subjects, syllabus, schedules and batches efficiently.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="py-5" style="background: #11131a; color: #ddd;">
+    <div class="container text-center">
+        <h2 class="fw-bold">About the System</h2>
+        <p class="mt-3 mb-0">
+            This College Management System helps automate day-to-day academic
+            and administrative processes, making the workflow smooth and efficient.
+        </p>
+    </div>
+</section>
+
+
+
+{% endblock %}
+
+
